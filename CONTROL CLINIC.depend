@@ -1,0 +1,88 @@
+# depslib dependency file v1.0
+1609390813 source:c:\users\admin\desktop\control clinic\src\drug.cpp
+
+1609390814 source:c:\users\admin\desktop\control clinic\src\patient.cpp
+
+1610043072 source:c:\users\admin\desktop\control clinic\main.cpp
+	<iostream>
+	<patient.h>
+	<Drug.h>
+	<iostream>
+	<fstream>
+	<iomanip>
+
+1610335606 c:\users\admin\desktop\control clinic\include\patient.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1610334384 c:\users\admin\desktop\control clinic\include\drug.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1610334648 c:\users\admin\desktop\control clinic\include\date.h
+	<string>
+	<cstring>
+	<iostream>
+
+1609390813 source:c:\users\admin\desktop\control clinic\src\date.cpp
+
+1609388054 source:c:\users\admin\desktop\control clinic\src\formatname.cpp
+
+1609390451 c:\users\admin\desktop\control clinic\include\formatname.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<formatName.h>
+	<cstring>
+
+1609390814 source:c:\users\admin\desktop\control clinic\src\formatstring.cpp
+
+1610334044 c:\users\admin\desktop\control clinic\include\formatstring.h
+
+1610182880 source:c:\users\admin\desktop\control clinic\complex.cpp
+	<iostream>
+	<math.h>
+
+1610043072 source:c:\users\admin\desktop\control clinic2\main.cpp
+	<iostream>
+	<patient.h>
+	<Drug.h>
+	<iostream>
+	<fstream>
+	<iomanip>
+
+1610390644 c:\users\admin\desktop\control clinic2\include\patient.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+	<Date.h>
+	<tryCatch.h>
+
+1610386935 c:\users\admin\desktop\control clinic2\include\date.h
+	<string>
+	<cstring>
+	<iostream>
+
+1610390747 c:\users\admin\desktop\control clinic2\include\drug.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1609390813 source:c:\users\admin\desktop\control clinic2\src\date.cpp
+
+1609390813 source:c:\users\admin\desktop\control clinic2\src\drug.cpp
+
+1609390814 source:c:\users\admin\desktop\control clinic2\src\formatstring.cpp
+
+1609390814 source:c:\users\admin\desktop\control clinic2\src\patient.cpp
+
+1610390517 c:\users\admin\desktop\control clinic2\include\trycatch.h
+
+1610390485 source:c:\users\admin\desktop\control clinic2\src\trycatch.cpp
+
