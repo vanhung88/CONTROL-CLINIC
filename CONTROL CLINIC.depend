@@ -86,3 +86,56 @@
 
 1610390485 source:c:\users\admin\desktop\control clinic2\src\trycatch.cpp
 
+1610043072 source:c:\users\admin\desktop\do_an\main.cpp
+	<iostream>
+	<patient.h>
+	<Drug.h>
+	<iostream>
+	<fstream>
+	<iomanip>
+
+1610438096 c:\users\admin\desktop\do_an\include\patient.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+	<people.h>
+	<sstream>
+
+1610432676 c:\users\admin\desktop\do_an\include\trycatch.h
+	<string>
+	<cstring>
+
+1610432736 c:\users\admin\desktop\do_an\include\drug.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1609390813 source:c:\users\admin\desktop\do_an\src\date.cpp
+
+1609390813 source:c:\users\admin\desktop\do_an\src\drug.cpp
+
+1609390814 source:c:\users\admin\desktop\do_an\src\patient.cpp
+
+1610390485 source:c:\users\admin\desktop\do_an\src\trycatch.cpp
+
+1610430668 source:c:\users\admin\desktop\do_an\src\people.cpp
+
+1610438006 c:\users\admin\desktop\do_an\include\people.h
+	<Date.h>
+	<tryCatch.h>
+	<iostream>
+	<format.h>
+
+1610386935 c:\users\admin\desktop\do_an\include\date.h
+	<string>
+	<cstring>
+	<iostream>
+
+1610436757 c:\users\admin\desktop\do_an\include\format.h
+	<string>
+	<cstring>
+
+1610436704 source:c:\users\admin\desktop\do_an\src\format.cpp
+

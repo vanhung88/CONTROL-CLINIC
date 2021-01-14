@@ -1,3 +1,7 @@
+#include<string>
+#include<cstring>
+
+using namespace std ;
 
 // bat ky tu
 bool checkString(string s)

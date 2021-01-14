@@ -2,92 +2,64 @@
 #include<fstream>
 #include<iomanip>
 #include<cstring>
-#include<Date.h>
-#include<tryCatch.h>
+#include<people.h>
+#include <sstream>
+//#include<format.h>
 
 using namespace std;
 
-// format string
-string lower(string s)
-{
-    for(int i = 0 ; i < s.length() ; i++)
-    {
-        if( 'A' <= s[i] && s[i] <= 'Z')
-        {
-            s[i] = s[i] + 32;
-        }
-    }
-    return s;
-}
 
-string format(string s)
-{
-    int begin = -1;
-    int end = -1;
-    for (int i = 0 ; i < s.length() ; i++ )
-    {
-        if( s[i] != ' ' && begin == -1 )
-        {
-            begin = i;
-        }
-        if(s[i] != ' ')
-        {
-            end = i;
-        }
-    }
-
-    s= s.substr( begin, (end +1 - begin));
-
-
-    s = lower(s);
-    if( s[0] < '0' || s[0] > '9' )
-    {
-        s[0] = s[0]-32;
-    }
-
-    string s2 = "";
-    for(int i =0 ; i < s.length() ; i++)
-    {
-        if( s[i] != ' ')
-        {
-            s2 += s[i];
-        }
-        if(s[i] == ' ' && s[i+1] != ' ')
-        {
-            s2 += s[i];
-            if( s[i+1] < '0' || s[i+1] > '9' )
-            {
-                s[i+1] = s[i+1] - 32 ;
-            }
-        }
-    }
-
-    return s2;
-}
-
-
-class patient
+class patient :public people
 {
     char idnum[50];
-    char name[50];
-    char sex[50];
-    Date dayOfBirth ;
-    //char age[50];
-    //new
-    char PhoneNumber[50] ;
+//    char name[50];
+//    char sex[50];
+//    Date dayOfBirth ;
+//    //char age[50];
+//    //new
+private:
     char adress[50];
+    char PhoneNumber[50] ;
     char bloodgroup[50];
     char prehistoric[50];
 
 public:
-    void getdata();
-    void showdata();
-    void show_tabular();
-    int getIDNum() const;
+    void getdata(); // input
+    void showdata(); // display
+    void show_tabular(); // display table
+    int getIDNum() const; // get ID
 };
 
 void patient::getdata()
 {
+//    cin.ignore();
+//    cout<<"\nEnter ID ";
+//    cin.getline(idnum,50);
+//    while( checkString(idnum)==true)
+//    {
+//        cout<<"Enter ID again: ";
+//        cin.getline(idnum,50);
+//    }
+//    cout<<"\nEnter patient Name: ";
+//    cin.getline(name,50);
+//    //string s= (string)idnum ;
+//    while(checknumber(name) == true || checkString(name)==true)
+//    {
+//        cout<<"Enter patient Name again: ";
+//        cin.getline(name,50);
+//    }
+//
+//    cout<<"\nEnter sex: ";
+//    cin.getline(sex,50);
+//    while(checknumber(sex) == true || checkString(sex)==true)
+//    {
+//        cout<<"Enter sex again: ";
+//        cin.getline(sex,50);
+//    }
+//
+//    cout<<"\nEnter day of birth: "<<endl;
+//    //cin.getline(age,50);
+//    dayOfBirth.input() ;
     cin.ignore();
     cout<<"\nEnter ID ";
     cin.getline(idnum,50);
@@ -96,26 +68,7 @@ void patient::getdata()
         cout<<"Enter ID again: ";
         cin.getline(idnum,50);
     }
-    cout<<"\nEnter patient Name: ";
-    cin.getline(name,50);
-    //string s= (string)idnum ;
-    while(checknumber(name) == true || checkString(name)==true)
-    {
-        cout<<"Enter patient Name again: ";
-        cin.getline(name,50);
-    }
-
-    cout<<"\nEnter sex: ";
-    cin.getline(sex,50);
-    while(checknumber(sex) == true || checkString(sex)==true)
-    {
-        cout<<"Enter sex again: ";
-        cin.getline(sex,50);
-    }
-
-    cout<<"\nEnter day of birth: "<<endl;
-    //cin.getline(age,50);
-    dayOfBirth.input() ;
+    people::getdata() ;
     cin.ignore();
     cout<<"\nEnter phone number: ";
     cin.getline(PhoneNumber,50);
@@ -155,11 +108,13 @@ void patient::getdata()
 
 void patient::showdata()
 {
-    cout<<"\nID Number: "<<idnum;
-    cout<<"\nName Patient: "<<format(name);
-    cout<<"\nSex: "<<sex;
-    cout<<"\nDay of birth: "; dayOfBirth.display2();
+//    cout<<"\nID Number: "<<idnum;
+//    cout<<"\nName Patient: "<<format(name);
+//    cout<<"\nSex: "<<sex;
+//    cout<<"\nDay of birth: "; dayOfBirth.display2();
     //cout<<"\Age: "<<age ;
+
+    people::showdata();
     cout<<"\nPhone Number: "<<PhoneNumber;
     cout<<"\nAdress: "<<format(adress);;
     cout<<"\nBlood group: "<<bloodgroup;
@@ -169,14 +124,15 @@ void patient::showdata()
 
 void patient::show_tabular()
 {
-    cout<<idnum<<setw(4)<<" "<<format(name) ;
+    cout<<idnum<<setw(4)
+    <<" "<<format(getName()) ;
 
-    if(strlen(name)<10)
+    if((getName().length())<10)
         cout<<setw(15) ;
     else cout<<setw(10) ;
 
-    cout<<sex<<setw(13)
-    <<dayOfBirth.display2()<<setw(18)<<PhoneNumber<<setw(15)
+    cout<<getSex()<<setw(13)
+    <<getDayOfBirth().display2()<<setw(18)<<PhoneNumber<<setw(15)
         <<format(adress)<<setw(10)<<bloodgroup<<setw(25)<<prehistoric<<endl;
 }
 

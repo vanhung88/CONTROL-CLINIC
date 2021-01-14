@@ -36,12 +36,16 @@
 		</Compiler>
 		<Unit filename="include/Date.h" />
 		<Unit filename="include/Drug.h" />
+		<Unit filename="include/format.h" />
 		<Unit filename="include/patient.h" />
+		<Unit filename="include/people.h" />
 		<Unit filename="include/tryCatch.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Date.cpp" />
 		<Unit filename="src/Drug.cpp" />
+		<Unit filename="src/format.cpp" />
 		<Unit filename="src/patient.cpp" />
+		<Unit filename="src/people.cpp" />
 		<Unit filename="src/tryCatch.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
